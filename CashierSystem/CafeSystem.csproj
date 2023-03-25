@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BC6DEDA-F948-46BA-BB8D-924BAC7AA06F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CashierSystem</RootNamespace>
+    <AssemblyName>CashierSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>F:\programmes\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>F:\programmes\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Sqlite, Version=5.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Sqlite.Core.5.0.1\lib\netstandard2.0\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=2.0.4.976, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_e_sqlite3.2.0.4\lib\net461\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=2.0.4.976, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.2.0.4\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.nativelibrary, Version=2.0.4.976, Culture=neutral, PublicKeyToken=502ed628492ab262, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_e_sqlite3.2.0.4\lib\net461\SQLitePCLRaw.nativelibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.dynamic_cdecl, Version=2.0.4.976, Culture=neutral, PublicKeyToken=b68184102cba0b3b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.dynamic_cdecl.2.0.4\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addcats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addcats.Designer.cs">
+      <DependentUpon>addcats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addprods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addprods.Designer.cs">
+      <DependentUpon>addprods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adminsettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adminsettings.Designer.cs">
+      <DependentUpon>Adminsettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="captinsedit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="captinsedit.Designer.cs">
+      <DependentUpon>captinsedit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="findrecnum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="findrecnum.Designer.cs">
+      <DependentUpon>findrecnum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logadmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logadmin.Designer.cs">
+      <DependentUpon>logadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newcaptin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newcaptin.Designer.cs">
+      <DependentUpon>newcaptin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newprod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newprod.Designer.cs">
+      <DependentUpon>newprod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="printersettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printersettings.Designer.cs">
+      <DependentUpon>printersettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recchoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recchoose.Designer.cs">
+      <DependentUpon>recchoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reguser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reguser.Designer.cs">
+      <DependentUpon>reguser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="servdes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="servdes.Designer.cs">
+      <DependentUpon>servdes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clossheft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clossheft.Designer.cs">
+      <DependentUpon>clossheft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showrec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showrec.Designer.cs">
+      <DependentUpon>showrec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showrecoldsheft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showrecoldsheft.Designer.cs">
+      <DependentUpon>showrecoldsheft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showsheft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showsheft.Designer.cs">
+      <DependentUpon>showsheft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tableclos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tableclos.Designer.cs">
+      <DependentUpon>tableclos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="takawatdel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="takawatdel.Designer.cs">
+      <DependentUpon>takawatdel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tblnums.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tblnums.Designer.cs">
+      <DependentUpon>tblnums.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transorder.Designer.cs">
+      <DependentUpon>transorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateprod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateprod.Designer.cs">
+      <DependentUpon>updateprod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updcaptin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updcaptin.Designer.cs">
+      <DependentUpon>updcaptin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addcats.resx">
+      <DependentUpon>addcats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addprods.resx">
+      <DependentUpon>addprods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adminsettings.resx">
+      <DependentUpon>Adminsettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="captinsedit.resx">
+      <DependentUpon>captinsedit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="findrecnum.resx">
+      <DependentUpon>findrecnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logadmin.resx">
+      <DependentUpon>logadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newcaptin.resx">
+      <DependentUpon>newcaptin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newprod.resx">
+      <DependentUpon>newprod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="printersettings.resx">
+      <DependentUpon>printersettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="recchoose.resx">
+      <DependentUpon>recchoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reguser.resx">
+      <DependentUpon>reguser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="servdes.resx">
+      <DependentUpon>servdes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clossheft.resx">
+      <DependentUpon>clossheft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showrec.resx">
+      <DependentUpon>showrec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showrecoldsheft.resx">
+      <DependentUpon>showrecoldsheft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showsheft.resx">
+      <DependentUpon>showsheft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tableclos.resx">
+      <DependentUpon>tableclos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="takawatdel.resx">
+      <DependentUpon>takawatdel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tblnums.resx">
+      <DependentUpon>tblnums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transorder.resx">
+      <DependentUpon>transorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateprod.resx">
+      <DependentUpon>updateprod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updcaptin.resx">
+      <DependentUpon>updcaptin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\71634.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\786263.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-symbol-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61225.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\612222225.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-settings-icon-3110-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chief.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tayar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %2810%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets'))" />
+  </Target>
+</Project>
